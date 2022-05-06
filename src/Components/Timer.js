@@ -5,8 +5,8 @@ function Timer(props){
 
     const StartButton = (
         <Button
-             type="primary" 
-             onClick={props.handleStart}
+            type="primary" 
+            onClick={props.handleStart}
         >
         Start
         </Button>
@@ -14,24 +14,24 @@ function Timer(props){
 
     const ActiveButtons = (
         <Space>
-        <Button
-            onClick={props.handleStop}
-        >
-            {props.isStop ? "Start": "Stop"}
-        </Button>
-        <Button 
-            type="primary" 
-            danger 
-            onClick={props.handleReset}
-        >
-            Reset
-        </Button>
+            <Button
+                onClick={props.handleStop}
+            >
+                {props.isStop ? "Start": "Stop"}
+            </Button>
+            <Button 
+                type="primary" 
+                danger 
+                onClick={props.handleReset}
+            >
+                Reset
+            </Button>
         </Space>
     );
 
     return (
         <div>
-             <span className="digits">
+            <span className="digits">
                 {("0" + Math.floor((props.time / 60000) % 60)).slice(-2)}:
             </span>
             <span className="digits">

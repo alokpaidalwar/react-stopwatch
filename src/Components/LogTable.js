@@ -24,7 +24,6 @@ function LogTable(props){
     ]
    
     const onPageChange = ({current}) => {
-        console.log(current)
         props.getTableData(current);
     }
 
